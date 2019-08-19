@@ -21,16 +21,17 @@ const LocalStrategy = passportLocal.Strategy;
  * as req.session.passport.user = {}
  */
 passport.serializeUser((user, done) => {
-    done(undefined, user.id);
+    done(undefined, user._id);
 });
 /**
  * @description
  * checks if user exists in database
  * if everything ok, proceed to route
  */
-passport.deserializeUser((id, done) => __awaiter(this, void 0, void 0, function* () {
+passport.deserializeUser((_id, done) => __awaiter(this, void 0, void 0, function* () {
     try {
-        const user = yield model_1.default.findById(id);
+        const user = yield model_1.default.findById(_id);
+        console.log(_id, user);
         done(null, user);
     }
     catch (error) {
@@ -70,7 +71,8 @@ passport.use(new LocalStrategy({
  * @description Login Required middleware.
  */
 function isAuthenticated(req, res, next) {
-    if (req.isAuthenticated()) {
+    console.log(req.isAuthenticated());
+    if (!req.isAuthenticated()) {
         return next();
     }
     next(new error_1.default(401, http.STATUS_CODES[401]));

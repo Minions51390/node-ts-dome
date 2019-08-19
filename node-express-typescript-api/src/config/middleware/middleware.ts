@@ -47,6 +47,7 @@ export function configure(app: express.Application): void {
     app.use(session({
         resave: true,
         saveUninitialized: true,
+        cookie:{httpOnly:true,secure: false ,maxAge:30*24*60*60*1000},  // 保存30天
         secret: config.secret,
         name: 'api.sid',
         store: new MongoStore({

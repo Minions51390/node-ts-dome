@@ -33,7 +33,7 @@ export const constantRouterMap = [
                 path: 'table',
                 name: 'Table',
                 component: () => import('@/views/table/index'),
-                meta: { title: '表格', icon: 'icon--test' }
+                meta: { title: '用户列表', icon: 'icon--test' }
             },
             {
                 path: 'tree',

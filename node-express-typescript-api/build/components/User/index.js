@@ -21,7 +21,12 @@ function findAll(req, res, next) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const users = yield service_1.default.findAll();
-            res.status(200).json(users);
+            res.status(200).json({
+                status: 200,
+                logged: true,
+                date: users,
+                message: ''
+            });
         }
         catch (error) {
             next(new error_1.HttpError(error.message.status, error.message));
@@ -39,7 +44,7 @@ exports.findAll = findAll;
 function findOne(req, res, next) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const user = yield service_1.default.findOne(req.params.id);
+            const user = yield service_1.default.findOne(req.query.id);
             res.status(200).json(user);
         }
         catch (error) {
@@ -48,25 +53,6 @@ function findOne(req, res, next) {
     });
 }
 exports.findOne = findOne;
-/**
- * @export
- * @param {Request} req
- * @param {Response} res
- * @param {NextFunction} next
- * @returns {Promise < void >}
- */
-function info(req, res, next) {
-    return __awaiter(this, void 0, void 0, function* () {
-        try {
-            const user = yield service_1.default.findOne(req.params.id);
-            res.status(200).json(user);
-        }
-        catch (error) {
-            next(new error_1.HttpError(error.message.status, error.message));
-        }
-    });
-}
-exports.info = info;
 /**
  * @export
  * @param {Request} req

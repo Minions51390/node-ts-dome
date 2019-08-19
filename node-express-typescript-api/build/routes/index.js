@@ -6,6 +6,7 @@ const passportConfig = require("../config/middleware/passport");
 const swaggerUi = require("swagger-ui-express");
 const AuthRouter_1 = require("./AuthRouter");
 const UserRouter_1 = require("./UserRouter");
+const ReptileRouter_1 = require("./ReptileRouter");
 const JDWL = require('jdwl');
 let swaggerDoc;
 try {
@@ -30,12 +31,17 @@ function init(app) {
      *  Also, check if user authenticated
      * @constructs
      */
-    app.use('/v1/users', passportConfig.isAuthenticated, UserRouter_1.default);
+    app.use('/v1/user', passportConfig.isAuthenticated, UserRouter_1.default);
     /**
      * @description Forwards any requests to the /auth URI to our AuthRouter
      * @constructs
      */
     app.use('/auth', AuthRouter_1.default);
+    /**
+     * 爬虫
+     * @constructs
+     */
+    app.use('/reptile', ReptileRouter_1.default);
     /**
      * @description
      *  If swagger.json file exists in root folder, shows swagger api description

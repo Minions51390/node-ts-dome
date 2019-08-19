@@ -99,7 +99,7 @@ router.post('/', UserComponent.create);
  *              oneOf:
  *                - $ref: '#/components/schemas/UserSchema'
  */
-router.get('/:id', UserComponent.findOne);
+router.get('/info', UserComponent.findOne);
 
 /**
  * DELETE method route

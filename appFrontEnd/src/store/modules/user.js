@@ -33,6 +33,7 @@ const user = {
           const data = response.date;
           //暂且id代替token
           setToken(data._id)
+          console.log(data._id)
           commit('SET_TOKEN', data._id);
           resolve()
         }).catch(error => {
@@ -43,6 +44,7 @@ const user = {
 
     // 获取用户信息
     GetInfo({ commit, state }) {
+      console.log(state)
       return new Promise((resolve, reject) => {
         getInfo(state.token).then(response => {
           const data = response.data
@@ -51,8 +53,8 @@ const user = {
           } else {
             reject('getInfo: roles must be a non-null array !')
           }
-          commit('SET_NAME', data.name)
-          commit('SET_AVATAR', data.avatar)
+          commit('SET_NAME', data.name||"")
+          commit('SET_AVATAR', data.avatar||"")
           resolve(response)
         }).catch(error => {
           reject(error)

@@ -45,6 +45,7 @@ function configure(app) {
     app.use(session({
         resave: true,
         saveUninitialized: true,
+        cookie: { httpOnly: true, secure: false, maxAge: 30 * 24 * 60 * 60 * 1000 },
         secret: index_1.default.secret,
         name: 'api.sid',
         store: new MongoStore({

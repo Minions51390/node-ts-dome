@@ -53,6 +53,7 @@ export async function login(req: Request, res: Response, next: NextFunction): Pr
         if (err) {
             return next(new HttpError(400, err.message));
         }
+       
         if (!user) {
             return res.json({
                 status: 401,
@@ -63,14 +64,19 @@ export async function login(req: Request, res: Response, next: NextFunction): Pr
         let jwt = new jwtUtils(user.id);
         let token = jwt.generateToken()||2;
         user.tokens.push(token);
-        // const newUser: IUserModel = new UserModel(user);
-        // newUser.save();
-        return res.json({
-            status: 200,
-            logged: true,
-            date:user,
-            message: 'Successfully logged!'
+        res.cookie('token', token);
+        req.logIn(user, (err) => {
+            if (err) {
+                return next(new HttpError(err));
+            }
+            return res.json({
+                status: 200,
+                logged: true,
+                date:user,
+                message: 'Successfully logged!'
+            });
         });
+     
     })(req, res, next);
 }
 
@@ -83,21 +89,21 @@ export async function login(req: Request, res: Response, next: NextFunction): Pr
  */
 export async function logout(req: Request, res: Response, next: NextFunction): Promise < void > {
 
-    if (!req.user) {
-        res.json({
-            status: 401,
-            logged: false,
-            message: 'You are not authorized to app. Can\'t logout'
-        });
-    }
+    // if (!req.user) {
+    //     res.json({
+    //         status: 401,
+    //         logged: false,
+    //         message: 'You are not authorized to app. Can\'t logout'
+    //     });
+    // }
 
-    if (req.user) {
+    // if (req.user) {
         req.logout();
         res.json({
             status: 200,
             logged: false,
             message: 'Successfuly logged out!'
         });
-    }
+    // }
 
 }

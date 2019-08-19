@@ -10,6 +10,14 @@ export function login(username, password) {
         }
     })
 }
+
+export function logout() {
+    return request({
+        url: '/auth/logout',
+        method: 'post'
+    })
+}
+
 export function signUp(email, password,name) {
     return request({
         url: '/auth/signup',
@@ -21,15 +29,10 @@ export function signUp(email, password,name) {
 }
 export function getInfo(uid) {
     return request({
-        url: '/v1/user/'+uid,
+        url: '/v1/user/info',
         method: 'get',
-        // params: { id:uid }
+        params: { id:uid }
     })
 }
 
-export function logout() {
-    return request({
-        url: '/user/logout',
-        method: 'post'
-    })
-}
+

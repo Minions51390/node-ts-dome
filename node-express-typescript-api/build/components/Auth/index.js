@@ -69,13 +69,17 @@ function login(req, res, next) {
             let jwt = new jwt_1.default(user.id);
             let token = jwt.generateToken() || 2;
             user.tokens.push(token);
-            // const newUser: IUserModel = new UserModel(user);
-            // newUser.save();
-            return res.json({
-                status: 200,
-                logged: true,
-                date: user,
-                message: 'Successfully logged!'
+            res.cookie('token', token);
+            req.logIn(user, (err) => {
+                if (err) {
+                    return next(new error_1.default(err));
+                }
+                return res.json({
+                    status: 200,
+                    logged: true,
+                    date: user,
+                    message: 'Successfully logged!'
+                });
             });
         })(req, res, next);
     });
@@ -88,44 +92,23 @@ exports.login = login;
  * @param {NextFunction} next
  * @returns {Promise < void >}
  */
-function info(req, res, next) {
-    return __awaiter(this, void 0, void 0, function* () {
-        passport.authenticate('local', (err, user) => {
-            console.log(err, user);
-            // try {
-            //     const user: IUserModel = await UserService.findOne(req.params.id);
-            //     res.status(200).json(user);
-            // } catch (error) {
-            //     next(new HttpError(error.message.status, error.message));
-            // }
-        })(req, res, next);
-    });
-}
-exports.info = info;
-/**
- * @export
- * @param {Request} req
- * @param {Response} res
- * @param {NextFunction} next
- * @returns {Promise < void >}
- */
 function logout(req, res, next) {
     return __awaiter(this, void 0, void 0, function* () {
-        if (!req.user) {
-            res.json({
-                status: 401,
-                logged: false,
-                message: 'You are not authorized to app. Can\'t logout'
-            });
-        }
-        if (req.user) {
-            req.logout();
-            res.json({
-                status: 200,
-                logged: false,
-                message: 'Successfuly logged out!'
-            });
-        }
+        // if (!req.user) {
+        //     res.json({
+        //         status: 401,
+        //         logged: false,
+        //         message: 'You are not authorized to app. Can\'t logout'
+        //     });
+        // }
+        // if (req.user) {
+        req.logout();
+        res.json({
+            status: 200,
+            logged: false,
+            message: 'Successfuly logged out!'
+        });
+        // }
     });
 }
 exports.logout = logout;
