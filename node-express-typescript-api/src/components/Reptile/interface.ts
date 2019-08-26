@@ -1,14 +1,18 @@
-import { IMovieModel } from './model';
+import { IMovieModel,IJobModel } from './model';
 
 /**
  * @export
- * @interaface ReptileService
+ * @interaface MovieReptileServiceInterface
  */
-export interface ReptileService {
-    /**
-     * @param {IUserModel} IUserModel
-     * @returns {Promise<IUserModel>}
-     * @memberof AuthService
-     */
+export interface MovieReptileServiceInterface {
     insert(MovieModel: IMovieModel): Promise < IMovieModel > ;
+    findOne(name: string): Promise<IMovieModel>;
+}
+/**
+ * @export
+ * @interaface JobReptileServiceInterface
+ */
+export interface JobReptileServiceInterface {
+    insert(JobModel: IJobModel): Promise < IJobModel > ;
+    findOne(name: string): Promise<IJobModel>;
 }

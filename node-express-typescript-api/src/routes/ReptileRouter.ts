@@ -7,8 +7,10 @@ import { Router } from 'express';
  */
 const router: Router = Router();
 
-router.get('/getData', ReptileComponent.getData);
+router.get('/movieRt', ReptileComponent.movieRt);
 
+
+router.get('/jobRt', ReptileComponent.jobRt);
 /**
  * @export {express.Router}
  */
