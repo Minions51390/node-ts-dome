@@ -2,7 +2,7 @@ const currentDateUTC = new Date().toUTCString()
 
 module.exports = {
 	title: '溜忙 · 南易',
-	dest: './public',
+	dest: './docs',
 	themeConfig: {
 		repo: 'https://github.com/zhenquan321/node-ts-dome.git',
 		repoLabel: 'Git',
@@ -25,8 +25,6 @@ module.exports = {
 			],
 			'/node/': [
 				'',      /* /bar/ */
-				'three', /* /bar/three.html */
-				'four'   /* /bar/four.html */
 			],
 			'/blog/': [
 				'',      /* /bar/ */
@@ -36,10 +34,8 @@ module.exports = {
 			// fallback
 			'support': [
 				'',        /* / */
-				'contact', /* /contact.html */
-				'about'    /* /about.html */
 			]
-			}
+		}
 
 	},
 	plugins: [
