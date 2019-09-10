@@ -1,5 +1,8 @@
 .DS_Store
 appFrontEnd/node_modules 
+react-admin/node_modules 
+taro-app/node_modules 
+vuePress-Blog/node_modules 
 node-express-typescript-api/node_modules 
 node-express-typescript-api/build 
 # local env files
