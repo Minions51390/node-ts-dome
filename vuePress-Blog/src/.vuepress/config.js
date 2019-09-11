@@ -32,7 +32,6 @@ module.exports = {
 			],
 			'/node/': [
 				['',"简介"],
-				['common',"JavaScript 基础问题"], 
 				['module',"模块"], 
 				['event-async',"事件/异步"], 
 				['process',"进程"], 
@@ -45,12 +44,17 @@ module.exports = {
 				['security',"安全"], 
 			],
 			'/offer/': [
-				['',"offer之道"],  /* /foo/ */
+				['',"offer之道"], 
+				['html',"html"],  
+				['css',"css"],  
+				['js',"JavaScript"],  
+				['algorithm',"数据结构与算法"],  
+				['hr',"面试技巧"],   
 			],
 			'/blog/': [
-				'',      /* /bar/ */
-				'my-first-post', /* /bar/three.html */
-				'my-second-post'   /* /bar/four.html */
+				'',      
+				'my-first-post', 
+				'my-second-post'  
 			],
 			// fallback
 			'support': [
