@@ -9,12 +9,12 @@ actionLink: /frontEnd/
 features:
 - 
     title: 大前端
-    details: Feature Details
+    details: 大前端工程师，终将搞定所有端上的开发。
 - 
-    title: node后端
-    details: Feature Details
+    title: node
+    details: Node.js已经成为后端开发最流行的框架之一，也是前端工程师必备的技能点。
 - 
     title: offer之道
-    details: Feature Details
+    details: 面试除了需要过硬的知识储备，技巧也是成功的关键。
 footer: 成就，源于一点一滴的积累 —— 六小芒
 ---

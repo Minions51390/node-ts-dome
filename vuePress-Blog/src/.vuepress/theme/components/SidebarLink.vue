@@ -77,6 +77,7 @@ a.sidebar-link
   &:hover
     color $accentColor
   &.active
+    // background-color: #fafafa;
     font-weight 600
     color $accentColor
     border-left-color $accentColor

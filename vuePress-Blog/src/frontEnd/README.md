@@ -2,35 +2,12 @@
 title: 大前端
 ---
 
-## Hello Dr. Zoidberg
+## 简介
+大前端部分为前端相关知识的热点难点总结；内容比较繁杂，可根据自己的需要选看。
 
-Dr. Zoidberg, that doesn't make sense. But, okay! No! The kind with looting and maybe starting a few fires! Well, then good news! It's a suppository. Hey, guess what you're accessories to. Hey, guess what you're accessories to.
 
-## 表格
+部分内容以问答的方式展示。
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
 
-``` html
-<ul>
-  <li
-    v-for="todo in todos"
-    :key="todo.id"
-  >
-    {{ todo.text }}
-  </li>
-</ul>
-```
 
-``` js {4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
+## 内容

@@ -12,6 +12,7 @@ module.exports = {
 		nav: [
 			{ text: '大前端', link: '/frontEnd/' }, 
 			{ text: 'node', link: '/node/' },
+			{ text: 'offer之道', link: '/offer/' },
 			{ text: '随笔', link: '/blog/' },
 			{ text: '支持', link: '/support/' }
 		],
@@ -21,11 +22,30 @@ module.exports = {
 		startPage: 0,
 		sidebar: {
 			'/frontEnd/': [
-				['',"简介"],  /* /foo/ */
-				['js',"js基础"]  /* /foo/one.html */
+				['',"前言"], 
+				['html',"html"],  
+				['css',"css"],  
+				['js',"JavaScript"], 
+				['typescript',"TypeScript"], 
+				['es6+',"es6+"], 
+				['regular',"正则"] 
 			],
 			'/node/': [
-				'',      /* /bar/ */
+				['',"简介"],
+				['common',"JavaScript 基础问题"], 
+				['module',"模块"], 
+				['event-async',"事件/异步"], 
+				['process',"进程"], 
+				['io',"IO"], 
+				['network',"Network"], 
+				['error',"错误处理/调试"], 
+				['test',"测试"], 
+				['util',"util"], 
+				['storage',"存储"], 
+				['security',"安全"], 
+			],
+			'/offer/': [
+				['',"offer之道"],  /* /foo/ */
 			],
 			'/blog/': [
 				'',      /* /bar/ */
