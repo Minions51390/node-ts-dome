@@ -1,6 +1,7 @@
 const currentDateUTC = new Date().toUTCString()
 
 module.exports = {
+	// base:"/lmongo/",
 	title: '溜忙 · 南易',
 	dest: './docs',
 	themeConfig: {
@@ -9,7 +10,7 @@ module.exports = {
 		editLinks: true,
 		editLinkText: 'Found a bug? Help me improve this page!',
 		nav: [
-			{ text: '前端', link: '/frontEnd/' }, 
+			{ text: '大前端', link: '/frontEnd/' }, 
 			{ text: 'node', link: '/node/' },
 			{ text: '随笔', link: '/blog/' },
 			{ text: '支持', link: '/support/' }

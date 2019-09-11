@@ -19,8 +19,9 @@
     :target="isMailto(link) || isTel(link) ? null : '_blank'"
     :rel="isMailto(link) || isTel(link) ? null : 'noopener noreferrer'"
   >
-    {{ item.text }}
-    <OutboundLink/>
+    {{ item.text }} 
+
+    <!-- <OutboundLink/> -->
   </a>
 </template>
 

@@ -83,10 +83,12 @@ export default {
       max-height 280px
       display block
       margin 3rem auto 1.5rem
+   
+    h1, .description, .action
+      margin 1rem auto
     h1
       font-size 3rem
-    h1, .description, .action
-      margin 1.8rem auto
+      margin-top 2rem
     .description
       max-width 35rem
       font-size 1.6rem
@@ -95,6 +97,7 @@ export default {
     .action-button
       display inline-block
       font-size 1.2rem
+      margin-top 2rem
       color #fff
       background-color $accentColor
       padding 0.8rem 1.6rem
@@ -102,6 +105,8 @@ export default {
       transition background-color .1s ease
       box-sizing border-box
       border-bottom 1px solid darken($accentColor, 10%)
+      .icon.outbound
+        color #fff
       &:hover
         background-color lighten($accentColor, 10%)
   .features

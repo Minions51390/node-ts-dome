@@ -1,5 +1,5 @@
 ---
-title: Archive
+title: node
 ---
 
 <ArchiveList :pages="$site.pages" />

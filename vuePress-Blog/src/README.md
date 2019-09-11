@@ -1,19 +1,20 @@
 ---
 title: Home
 home: true
-heroText: Hero
-tagline: Some tagline
-actionText: Go To Github
-actionLink: https://github.com/bencodezen/vuepress-blog-boilerplate
+heroText: 前端·积累·成长
+tagline: 路漫漫其修远兮，吾将上下而求索
+actionText: 开始 →
+heroImage: /vuepress-blog-logo.png
+actionLink: /frontEnd/
 features:
 - 
-    title: Feature 1
+    title: 大前端
     details: Feature Details
 - 
-    title: Feature 2
+    title: node后端
     details: Feature Details
 - 
-    title: Feature 3
+    title: offer之道
     details: Feature Details
-footer: This is a footer
+footer: 成就，源于一点一滴的积累 —— 六小芒
 ---

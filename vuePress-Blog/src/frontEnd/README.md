@@ -1,5 +1,5 @@
 ---
-title: forntEnd
+title: 大前端
 ---
 
 ## Hello Dr. Zoidberg
