@@ -2,7 +2,7 @@ const currentDateUTC = new Date().toUTCString()
 
 module.exports = {
 	// base:"/lmongo/",
-	title: '溜忙 · 南易',
+	title: '忙 · 南易',
 	dest: './docs',
 	themeConfig: {
 		repo: 'https://github.com/zhenquan321/node-ts-dome.git',
@@ -45,9 +45,10 @@ module.exports = {
 			],
 			'/offer/': [
 				['',"offer之道"], 
-				['html',"html"],  
-				['css',"css"],  
+				['html',"HTML"],  
+				['css',"CSS"],  
 				['js',"JavaScript"], 
+				['es6+',"es6+重点考察知识点"], 
 				{
 					title: '前端框架',
 					collapsable: false, 
