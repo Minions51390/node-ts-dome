@@ -1,10 +1,6 @@
----
-title: React
----
-
 # React面试题
 
-点击关注本[公众号](#公众号)获取文档最新更新,并可以领取配套于本指南的 **《前端面试手册》** 以及**最标准的简历模板**.
+
 
 ## React最新的生命周期是怎样的?
 
@@ -76,7 +72,9 @@ React组件间通信方式:
 
 ![2019-07-31-18-38-37]( https://xiaomuzhu-image.oss-cn-beijing.aliyuncs.com/2ccb1b43c7392d5a0594668fdcbec4de.png)
 
+## React有哪些优化性能是手段?
 
+性能优化的手段很多时候是通用的详情见[前端性能优化加载篇](load.md)
 
 ## React如何进行组件/逻辑复用?
 
@@ -88,6 +86,7 @@ React组件间通信方式:
 * 渲染属性
 * react-hooks
 
+组件复用详解见[组件复用](abstract.md)
 
 ## mixin、hoc、render props、react-hooks的优劣如何？
 

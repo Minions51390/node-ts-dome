@@ -1,10 +1,5 @@
----
-title: Vue
----
-
 # Vue面试题
 
-点击关注本[公众号](#公众号)获取文档最新更新,并可以领取配套于本指南的 **《前端面试手册》** 以及**最标准的简历模板**.
 
 Vue框架部分我们会涉及一些高频且有一定探讨价值的面试题,我们不会涉及一些非常初级的在官方文档就能查看的纯记忆性质的面试题,比如:
 
@@ -146,6 +141,7 @@ data.name = '渣渣辉';
 //戏我演过很多,可游戏我只玩贪玩懒月
 ```
 
+> 详细实现见[Proxy比defineproperty优劣对比?](devsProxy.md)
 
 ## Proxy与Object.defineProperty的优劣对比?
 
@@ -161,6 +157,7 @@ Object.defineProperty的优势如下:
 
 * 兼容性好,支持IE9
 
+> 详细实现见[Proxy比defineproperty优劣对比?](devsProxy.md)
 
 ## 你是如何理解Vue的响应式系统的?
 
@@ -173,6 +170,7 @@ Object.defineProperty的优势如下:
 * 当 Vue Component render 函数被执行的时候, data 上会被 触碰(touch), 即被读, getter 方法会被调用, 此时 Vue 会去记录此 Vue component 所依赖的所有 data。(这一过程被称为依赖收集)
 * data 被改动时（主要是用户操作）, 即被写, setter 方法会被调用, 此时 Vue 会去通知所有依赖于此 data 的组件去调用他们的 render 函数进行更新。
 
+> [深入响应式系统](reactivity.md)
 
 ## 既然Vue通过数据劫持可以精准探测数据变化,为什么还需要虚拟DOM进行diff检测差异?
 
@@ -211,21 +209,11 @@ diff算法的过程中,先会进行新旧节点的首尾交叉对比,当无法�
 
 ![2019-07-26-14-52-57]( https://xiaomuzhu-image.oss-cn-beijing.aliyuncs.com/8edce49381a9f6198faa60d7af73f74b.png)
 
-<!-- ## Vue如何解析指令?
+## Vue如何解析指令?
 
 
 
-## Vuex原理? -->
+## Vuex原理?
 
 
 ---
-
-## 公众号
-
-想要实时关注笔者最新的文章和最新的文档更新请关注公众号**程序员面试官**,后续的文章会优先在公众号更新.
-
-**简历模板:** 关注公众号回复「模板」获取
-
-**《前端面试手册》:** 配套于本指南的突击手册,关注公众号回复「fed」获取
-
-![2019-08-12-03-18-41]( https://xiaomuzhu-image.oss-cn-beijing.aliyuncs.com/d846f65d5025c4b6c4619662a0669503.png)

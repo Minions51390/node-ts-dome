@@ -3,8 +3,9 @@ appFrontEnd/node_modules
 react-admin/node_modules 
 taro-app/node_modules 
 vuePress-Blog/node_modules 
-node-express-typescript-api/node_modules 
-node-express-typescript-api/build 
+node-express-ts-api/node_modules 
+node-ts-koa-rest/node_modules 
+node-express-ts-api/build 
 # local env files
 .env.local
 .env.*.local

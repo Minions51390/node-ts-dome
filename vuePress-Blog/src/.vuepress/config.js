@@ -10,10 +10,11 @@ module.exports = {
 		editLinks: true,
 		editLinkText: 'Found a bug? Help me improve this page!',
 		nav: [
-			{ text: '大前端', link: '/frontEnd/' }, 
+			{ text: '大前端', link: '/frontEnd/' },
 			{ text: 'node', link: '/node/' },
 			{ text: 'offer之道', link: '/offer/' },
-			{ text: '随笔', link: '/blog/' },
+			{ text: '大厂真题', link: '/interviewQuestions/bytedance' },
+			// { text: '随笔', link: '/blog/' },
 			{ text: '支持', link: '/support/' }
 		],
 		logo: '/vuepress-blog-logo.png',
@@ -22,47 +23,56 @@ module.exports = {
 		startPage: 0,
 		sidebar: {
 			'/frontEnd/': [
-				['',"前言"], 
-				['html',"html"],  
-				['css',"css"],  
-				['js',"JavaScript"], 
-				['typescript',"TypeScript"], 
-				['es6+',"es6+"], 
-				['regular',"正则"] 
+				['', "前言"],
+				['html', "html"],
+				['css', "css"],
+				['js', "JavaScript"],
+				['typescript', "TypeScript"],
+				['es6+', "es6+"],
+				['regular', "正则"]
 			],
 			'/node/': [
-				['',"简介"],
-				['module',"模块"], 
-				['event-async',"事件/异步"], 
-				['process',"进程"], 
-				['io',"IO"], 
-				['network',"Network"], 
-				['error',"错误处理/调试"], 
-				['test',"测试"], 
-				['util',"util"], 
-				['storage',"存储"], 
-				['security',"安全"], 
-			],
-			'/offer/': [
-				['',"offer之道"], 
-				['html',"HTML"],  
-				['css',"CSS"],  
-				['js',"JavaScript"], 
-				['es6+',"es6+重点考察知识点"], 
+				// {
+				// 	title: 'express',
+				// 	collapsable: false, 
+				// 	children: [
+				// 		['',"简介"],
+				// 	],  
+				// },
+				// {
+				// 	title: 'koa',
+				// 	collapsable: false, 
+				// 	children: [
+				// 		['',"简介"],
+				// 	],  
+				// },
 				{
-					title: '前端框架',
-					collapsable: false, 
-					children: ['react',"vue"],  
+					title: '基础知识',
+					collapsable: false,
+					children: [
+						['', "简介"],
+						['module', "模块"],
+						['event-async', "事件/异步"],
+						['process', "进程"],
+						['io', "IO"],
+						['network', "Network"],
+						['error', "错误处理/调试"],
+						['test', "测试"],
+						['util', "util"],
+						['storage', "存储"],
+						['security', "安全"],
+					],
 				},
-				['Engineering',"工程化"],  
-				['security',"安全相关"],  
-				['algorithm',"数据结构与算法"],  
-				['hr',"面试技巧"],   
+
+			],
+			'/offer/': renderOfferSiderBar(),
+			'/interviewQuestions/': [
+				['bytedance', "字节跳动"],
 			],
 			'/blog/': [
-				'',      
-				'my-first-post', 
-				'my-second-post'  
+				'',
+				'my-first-post',
+				'my-second-post'
 			],
 			// fallback
 			'support': [
@@ -106,4 +116,151 @@ module.exports = {
 		['meta', { name: 'msapplication-TileColor', content: '#da532c' }],
 		['meta', { name: 'theme-color', content: '#ffffff' }]
 	]
+}
+
+
+
+function renderOfferSiderBar() {
+	return (
+		[{
+			title: '前言',
+			collapsable: false,
+			children: [
+				'',
+			]
+		},
+		{
+			title: '面试技巧',
+			collapsable: true,
+			children: [
+				'resume',
+				'project',
+				'hr',
+			]
+		},
+		{
+			title: '推荐',
+			collapsable: true,
+			children: [
+				'book'
+			]
+		},
+		{
+			title: '前端基础',
+			collapsable: true,
+			children: [
+				'htmlBasic',
+				'cssBasic',
+				'jsBasic',
+				'browser',
+				'dom',
+				// 'designPatterns',
+			]
+		},
+		{
+			title: '前端基础笔试',
+			collapsable: true,
+			children: [
+				'httpWritten',
+				'jsWritten',
+			]
+		},
+		{
+			title: '前端原理详解',
+			collapsable: true,
+			children: [
+				'hoisting',
+				'eventLoop',
+				'immutable',
+				'memory',
+				'deepclone',
+				'event',
+				'mechanism',
+			]
+		},
+		{
+			title: '计算机基础',
+			collapsable: true,
+			children: [
+				'http',
+				'tcp',
+			]
+		},
+		{
+			title: '数据结构与算法',
+			collapsable: true,
+			children: [
+				'algorithm',
+				'string',
+			]
+		},
+		{
+			title: '前端框架',
+			collapsable: true,
+			children: [
+				'framework',
+				'vue',
+				'react',
+			]
+		},
+		{
+			title: '框架原理详解',
+			collapsable: true,
+			children: [
+				'virtualDom',
+				'devsProxy',
+				'setState',
+				'router',
+				'redux',
+				'fiber',
+				'abstract',
+				'reactHook',
+			]
+		},
+		{
+			title: '框架实战技巧',
+			collapsable: true,
+			children: [
+				'componentCli',
+				'component',
+				'carousel',
+			]
+		},
+		{
+			title: '性能优化',
+			collapsable: true,
+			children: [
+				'load',
+				'execute',
+			]
+		},
+		{
+			title: '工程化',
+			collapsable: true,
+			children: [
+				'webpack',
+				'engineering',
+			]
+		},
+		{
+			title: '工程化原理',
+			collapsable: true,
+			children: [
+				'ast',
+				'WebpackHMR',
+				'webpackPlugin',
+				'webpackPluginDesign',
+				'webpackMoudle',
+				'webpackLoader',
+				'babelPlugin',
+			]
+		},
+		{
+			title: '安全',
+			collapsable: true,
+			children: [
+				'security',
+			]
+		},]
+	)
 }

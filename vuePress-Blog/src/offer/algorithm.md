@@ -1,10 +1,6 @@
----
-title: 算法与数据结构
----
-
 # 算法面试题
 
-点击关注本[公众号](#公众号)获取文档最新更新,并可以领取配套于本指南的 **《前端面试手册》** 以及**最标准的简历模板**.
+
 
 算法相关的题在前端面试中的比重越来越高,当然最有效的方法是去LeetCode上刷题,关于JavaScript版的LeetCode解题思路可以参考此项目[leetcode题解，记录自己的leetcode解题之路](https://github.com/azl397985856/leetcode)
 
@@ -496,5 +492,4 @@ const linearSearch = (arr, target) => {
 平均情况：T(n) = O(n)
 
 ---
-
 
