@@ -22,15 +22,7 @@ module.exports = {
 		pageSize: 10,
 		startPage: 0,
 		sidebar: {
-			'/frontEnd/': [
-				['', "前言"],
-				['html', "html"],
-				['css', "css"],
-				['js', "JavaScript"],
-				['typescript', "TypeScript"],
-				['es6+', "es6+"],
-				['regular', "正则"]
-			],
+			'/frontEnd/':renderFontEndSiderBar() ,
 			'/node/': [
 				// {
 				// 	title: 'express',
@@ -262,5 +254,30 @@ function renderOfferSiderBar() {
 				'security',
 			]
 		},]
+	)
+}
+
+function renderFontEndSiderBar() {
+	return (
+			
+		[
+			['', "前言"],
+			['html', "html"],
+			['css', "css"],
+			['JS-ch', "JavaScript"],
+			['typescript', "TypeScript"],
+			['regular', "正则"],
+			['Network-zh', "网络"],
+			['git-zh', "Git"],
+			{
+				title: '框架',
+				collapsable: true,
+				children: [
+					['framework-zh', "通识"],
+					['vue-zh', "vue"],
+					['react-zh', "react"],
+				]
+			},
+		]
 	)
 }
