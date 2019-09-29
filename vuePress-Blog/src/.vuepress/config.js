@@ -144,6 +144,7 @@ function renderOfferSiderBar() {
 				'htmlBasic',
 				'cssBasic',
 				'jsBasic',
+				"es6-7-8",
 				'browser',
 				'dom',
 				// 'designPatterns',
